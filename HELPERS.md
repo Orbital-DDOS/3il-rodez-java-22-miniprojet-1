@@ -1,0 +1,1 @@
+Code GYM pour la classe random et sa documentation
