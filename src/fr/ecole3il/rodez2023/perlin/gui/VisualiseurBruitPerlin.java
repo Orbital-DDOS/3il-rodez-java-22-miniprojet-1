@@ -33,6 +33,7 @@ public class VisualiseurBruitPerlin extends JFrame {
     private JLabel imageLabel; // Étiquette pour afficher l'image générée
     private JButton tickImageButton; // Bouton pour mettre à jour l'image
     private ImageBruit noiseImage; // Instance pour manipuler l'image de bruit de Perlin
+                                   // NoiseImage est un attribut de type image bruit
 
     /**
      * Constructeur par défaut pour initialiser la fenêtre et les composants.
@@ -99,8 +100,8 @@ public class VisualiseurBruitPerlin extends JFrame {
      * Méthode pour générer une nouvelle image de bruit de Perlin en fonction des paramètres saisis.
      */
     private void generateImage() {
-        String seedText = seedField.getText();
-        long seed = seedText.isEmpty() ? System.currentTimeMillis() : Long.parseLong(seedText);
+        String graineText = seedField.getText();
+        long graine = graineText.isEmpty() ? System.currentTimeMillis() : Long.parseLong(graineText);
 
         double resolution = DEFAULT_RESOLUTION;
         try {
@@ -111,7 +112,7 @@ public class VisualiseurBruitPerlin extends JFrame {
         
         
         ////////// CODE À MODIFIER 
-        noiseImage = new truc;
+        noiseImage = new ImageBruit(new BruitPerlin2D(graine, resolution));
         
         ////////// FIN CODE À MODIFIER
         tickImageButton.setEnabled(true); // Désactiver le bouton initialement
