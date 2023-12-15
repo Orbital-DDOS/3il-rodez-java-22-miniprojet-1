@@ -1,5 +1,6 @@
 package fr.ecole3il.rodez2023.perlin.math;
 
+
 import java.util.Random;
 
 /**

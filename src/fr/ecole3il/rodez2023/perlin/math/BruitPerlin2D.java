@@ -38,6 +38,7 @@ public class BruitPerlin2D extends Bruit2D {
 		double unit = 1.0f / (double) Math.sqrt(2);
 		double tmp, s, t, u, v, Cx, Cy, Li1, Li2;
 		// Adapter pour la résolution
+		double resolution = 1;
 		x /= resolution;
 		y /= resolution;
 

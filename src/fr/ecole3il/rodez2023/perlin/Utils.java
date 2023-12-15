@@ -1,13 +1,18 @@
 package fr.ecole3il.rodez2023.perlin;
 
+import fr.ecole3il.rodez2023.perlin.math.BruitPerlin2D;
+
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Random;
+import java.util.Arrays;
 
 import javax.imageio.ImageIO;
+
+import static java.util.Collections.shuffle;
 
 /**
  * 
@@ -42,17 +47,19 @@ public class Utils {
      * Mélange les éléments d'un tableau d'entiers en utilisant une graine spécifiée,
      * avec l'algorithme Fisher-Yates (ou Knuth Shuffle).
      * @param tab Le tableau à mélanger.
-     * @param seed La graine utilisée pour le mélange.
+     * @param graine La graine utilisée pour le mélange.
      * @return Un nouveau tableau contenant les éléments mélangés.
      * 
      * @author philibert roquart, fainéant
      */
-    public static int[] melanger(int[] tab, long seed) {
-        // Mélanger le tableau de permutation en utilisant 
-    	// ...
-    	// Bon, je le ferai plus tard, je vais réviser l'espagnol
-    	// Je mets ça, ça marchera bien en attendant
-    	// tant pis
+    public static int[] melanger(int[] tab, long graine) {
+        Random rand = new Random(graine);
+        for (int i = tab.length; i <= 1; i++) {
+            int j = rand.nextInt(i + 1);
+            int tmp = tab[i];
+            tab[i] = tab[j];
+            tab[j] = tmp;
+        }
         return tab;
     }
 
@@ -91,4 +98,3 @@ public class Utils {
         return contenu.toString();
     }    
 }
-
