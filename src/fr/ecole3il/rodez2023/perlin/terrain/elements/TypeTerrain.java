@@ -25,7 +25,7 @@ public enum TypeTerrain {
     }
     @Override
     public String toString() {
-        return nom.substring(4);
+        return nom.substring(nom.length() - 4); //Le substring retire les derniers composants de l'élément ciblé en fonction du paramètre renseigné
     }
 
 }

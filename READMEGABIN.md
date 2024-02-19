@@ -9,6 +9,8 @@ Question : Réaliser l'architecture que prendrait la forme d'une telle modélisa
 <p> Selon l'exercice du cours, avoir créer une classe par terrain dupliquerai du code, alors qu'une méthode plus simple est utilisable.</p>
 <p> La solution serait de créer une classe avec plusieurs instances de cette classe tout en différenciant les objets que l'on appelle.</p>
 
+Question : quel type utilisez-vous ?
+<p> Le type que j'utilise est le private double pour obtenir une double précision </p>
 
 
 

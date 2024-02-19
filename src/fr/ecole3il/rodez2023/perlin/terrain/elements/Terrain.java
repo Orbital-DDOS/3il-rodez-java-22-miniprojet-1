@@ -5,7 +5,7 @@ public class Terrain {
     private double hydrometrie;
     private double temperature;
 
-    public Terrain(double altitude, double hydrometrie, double temperature) {
+    public Terrain(double altitude, double hydrometrie, double temperature) throw MauvaiseValeurException{
         this.altitude = altitude;
         this.hydrometrie = hydrometrie;
         this.temperature = temperature;
