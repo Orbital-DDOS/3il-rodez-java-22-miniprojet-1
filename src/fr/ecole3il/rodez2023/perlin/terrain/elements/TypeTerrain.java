@@ -1,7 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
 import fr.ecole3il.rodez2023.perlin.Utils;
-
+import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
 import javax.rmi.CORBA.Util;
 import java.awt.image.BufferedImage;
 
@@ -25,7 +25,6 @@ public enum TypeTerrain {
     }
     @Override
     public String toString() {
-        return nom.substring(nom.length() - 4); //Le substring retire les derniers composants de l'élément ciblé en fonction du paramètre renseigné
+        return nom.substring(0, nom.length() - 4); //Le substring retire les derniers composants de l'élément ciblé en fonction du paramètre renseigné
     }
-
 }

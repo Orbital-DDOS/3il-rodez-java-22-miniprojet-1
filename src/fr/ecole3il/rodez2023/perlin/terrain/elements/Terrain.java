@@ -5,10 +5,15 @@ public class Terrain {
     private double hydrometrie;
     private double temperature;
 
-    public Terrain(double altitude, double hydrometrie, double temperature) throw MauvaiseValeurException{
-        this.altitude = altitude;
-        this.hydrometrie = hydrometrie;
+    public Terrain(double altitude, double hydrometrie, double temperature) throws MauvaiseValeurException{
+        if ( temperature < 0 || temperature > 1) throw new MauvaiseValeurException("La valeur n'est pas dans la plage de valeur autorisée (de 0 à 1)");
         this.temperature = temperature;
+
+        if ( altitude < -1 || altitude > 1) throw new MauvaiseValeurException("La valeur n'est pas dans la plage de valeur autorisée (de -1 à 1)");
+        this.altitude = altitude;
+
+        if ( hydrometrie < 0 || hydrometrie > 1) throw new MauvaiseValeurException("La valeur n'est pas dans la plage de valeur autorisée (de 0 à 1)");
+        this.hydrometrie = hydrometrie;
     }
 
 
@@ -24,6 +29,5 @@ public class Terrain {
     public double getTemperature() {
         return temperature;
     }
-
 
 }

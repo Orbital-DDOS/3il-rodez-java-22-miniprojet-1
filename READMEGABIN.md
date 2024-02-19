@@ -12,6 +12,8 @@ Question : Réaliser l'architecture que prendrait la forme d'une telle modélisa
 Question : quel type utilisez-vous ?
 <p> Le type que j'utilise est le private double pour obtenir une double précision </p>
 
+Question : pourquoi sortir, selon vous, ce bout d'algorithme de la classe ?
+<p> On sort ce bout d'algorithme pour éviter de modifier la classe à chaque changement de détermination</p>
 
 
 
