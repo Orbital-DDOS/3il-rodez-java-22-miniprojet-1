@@ -19,4 +19,8 @@ public class VisualiseurTerrain {
     public String getHydrometrieAffichee(int x, int y) {
         return null;
     }
+
+    public String getTemperatureAffichee(int x, int y) {
+        return null;
+    }
 }

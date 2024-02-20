@@ -1,5 +1,7 @@
 package fr.ecole3il.rodez2023.perlin.terrain.elements;
 
+import fr.ecole3il.rodez2023.perlin.terrain.visualisation.DetermineurTerrain;
+
 public class Terrain {
     private double altitude;
     private double hydrometrie;
@@ -30,4 +32,7 @@ public class Terrain {
         return temperature;
     }
 
+    public TypeTerrain getTypeTerrain(DetermineurTerrain dt){
+        return dt.determinerTerrain(this.altitude, this.hydrometrie, this.temperature);
+    }
 }

@@ -6,6 +6,7 @@ import java.io.IOException;
 
 import fr.ecole3il.rodez2023.perlin.Utils;
 import fr.ecole3il.rodez2023.perlin.terrain.elements.Terrain;
+import fr.ecole3il.rodez2023.perlin.terrain.generation.TerrainInexistant;
 
 /**
  * La classe ManipulateurCarte fournit des méthodes pour charger et enregistrer des cartes.
@@ -47,6 +48,8 @@ public class ManipulateurCarte {
             }
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (TerrainInexistant e) {
+            throw new RuntimeException(e);
         }
     }
 }
