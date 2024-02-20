@@ -15,7 +15,7 @@ public class Carte {
     }
 
     public Carte(String nouvelleCarte) {
-        
+
     }
 
     public Carte(String nouvelleCarte, int largeur, int hauteur, GenerateurAleatoire generateurAleatoire) {
