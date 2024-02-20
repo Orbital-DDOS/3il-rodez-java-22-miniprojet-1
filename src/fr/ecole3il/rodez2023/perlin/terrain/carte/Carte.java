@@ -11,8 +11,6 @@ public class Carte {
     int nom;
     private  int largeur;
     private int longueur;
-    private int[][] tableau;
-
     public Carte(String nouvelleCarte, int largeur, int hauteur, GenerateurPerlin generateurPerlin) {
     }
 
